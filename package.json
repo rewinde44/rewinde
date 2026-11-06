@@ -1,0 +1,18 @@
+{
+  "name": "rewinde",
+  "version": "0.4.1",
+  "private": true,
+  "type": "module",
+  "description": "Menschenzentrierte Prozessanalyse mit Rückwärtsverkettung",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test tests/domain.test.mjs tests/storage.test.mjs tests/designer.test.mjs tests/editor.test.mjs tests/server.test.mjs tests/github.test.mjs",
+    "build": "node scripts/build-static.mjs",
+    "package:github": "node scripts/prepare-github.mjs"
+  }
+}

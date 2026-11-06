@@ -1,0 +1,11 @@
+services:
+  rewinde:
+    build: .
+    ports:
+      - "127.0.0.1:4173:4173"
+    environment:
+      ALLOWED_HOSTS: "localhost,127.0.0.1,[::1]"
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
